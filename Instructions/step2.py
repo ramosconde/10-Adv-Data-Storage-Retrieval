@@ -101,47 +101,8 @@ def calc_temps(start, end=None):
         
         
         
-# and /api/v1.0/<start>/<end>
-# Return a JSON list of the minimum temperature, the average temperature, and the max temperature for a given start or start-end range.
-# 	min_max_avg=session.query(func.min(Measurement.tobs), func.max(Measurement.tobs), func.avg(Measurement.tobs))
-#               .filter(Measurement.station == most_active_station_id).all()
-# 	return jsonify(min_max_avg)
-
-# 	temps_data = session.query(func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs))\
-#                             .filter(Measurement.date >= start).all()
-# 	
-	
-# When given the start only, calculate TMIN, TAVG, and TMAX for all dates greater than and equal to the start date.
-
-
-# When given the start and the end date, calculate the TMIN, TAVG, and TMAX for dates between the start and end date inclusive.
-
-
-
-
-
-
-
-
-# Hints
-# You will need to join the station and measurement tables for some of the analysis queries.
-# Use Flask jsonify to convert your API data into a valid JSON response object.
-
-
-
-# C
 
 if __name__ == "__main__":
  #This line starts the server. Not needed if the program is called from another program.
     app.run(debug=True)     
 
-
-# all_min_avg_max = []
-# 	for min_avg_max in temps_data:
-# 		min_avg_max_dict = {}
-# 		min_avg_max_dict["TMIN"] = min_avg_max[0]
-# 		min_avg_max_dict["TAVG"] = min_avg_max[1]
-# 		min_avg_max_dict["TMAX"] = min_avg_max[2]
-# 		all_min_avg_max.append(min_avg_max_dict)
-# 
-# 	return jsonify(all_min_avg_max)
